@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./images/bg-intro-mobile.png');
+    background-color: hsl(0, 100%, 74%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    column-gap: 0;
+    padding: 7vh 6vw;
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+.main-container>div{
+    flex: 0 1 50%;
+    padding: 0 20px;
+}
+
+.left{
+    color: white;
+}
+
+.left h1{
+    line-height: 1;
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.left p{
+    padding-left:3rem;
+    text-align: center;
+}
+
+.right{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+    row-gap: 1.3rem;
+    max-width: 100%;
+}
+
+.right>p{
+    color:  rgba(185, 182, 211, 1);
+    background: hsl(248, 32%, 49%);
+    padding: 1rem 3rem;
+    text-align: center;
+    box-shadow: 0 0.4rem rgb(5, 5, 5);
+    border-radius: 0.6rem;
+    
+}
+
+.right>p strong{
+    color: white;
+}
+
+.right>p:hover,
+.right>p:focus{
+    background-color: hsl(248, 31%, 44%);
+}
+
+.form-container{
+    background: white;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.4rem rgba(247, 214, 214, 0.3);
+    overflow: hidden;
+    text-align: center;
+    padding: 30px 40px;
+    max-width: 100%;
+}
+
+.form-control{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+	padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control input{
+    color: hsl(249, 10%, 26%);
+    padding: 1em;
+    margin: .8rem auto 0 auto;
+    border: 0.063rem solid rgba(185, 182, 211, 1);
+    border-radius: 5px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	width: 100%;
+    
+}
+
+.form-control input:focus{
+    outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: hsl(0, 100%, 74%);
+	color: hsl(0, 100%, 74%);
+}
+
+.form-control.error input::placeholder {
+	color: hsl(0, 100%, 74%);
+}
+
+
+.form-control img {
+	visibility: hidden;
+	position: absolute;
+	top: 25px;
+	right: 10px;
+}
+
+.form-control.success img.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error img.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+.form-control.success small.password {
+	visibility: visible;
+}
+
+.claim-btn{
+    background: hsl(154, 59%, 51%);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    letter-spacing: 1.75px;
+    border: none;
+    box-shadow: 0 0.3rem rgba(39, 139, 96, 1);
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+    width: 100%;
+    margin: .8rem auto 0 auto;
+}
+
+
+.terms{
+    
+    color: rgba(185, 182, 211, 1);
+    margin: .8rem auto 0 auto;
+}
+
+.terms>a{
+    color: hsl(0, 100%, 74%);
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    position: relative;
+    bottom: 1%;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width:938px) {
+    body{
+        background-image: url('./images/bg-intro-desktop.png');
+
+    }   
+    .main-container {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 0;
+    }
+
+    .left {
+        margin-left: auto;
+    }
+
+    .left h1{
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .left p {
+        text-align: left;
+        padding-left: 3em;
+    }
+}
